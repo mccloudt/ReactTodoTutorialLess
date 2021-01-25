@@ -1,0 +1,45 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  background-color: #6e7c91;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.card {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  padding: 5% 0 10% 0;
+  background-color: #91836e;
+  box-shadow: 1px 0px 10px 5px black;
+  border-radius: 10px;
+}
+ul * {
+  list-style: none;
+  text-align: center;
+  padding: 2%;
+}
+li * {
+  margin: 10%;
+}
+.input * {
+  display: block;
+  margin: 2% auto;
+  padding: 2%;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.input input[type="text"] {
+  background-color: #f4f1de;
+}
+.input button {
+  background-color: #06d6a0;
+  width: 150px;
+}
+.container {
+  display: flex;
+}
