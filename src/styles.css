@@ -6,24 +6,39 @@ body {
   background-color: #6e7c91;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.card {
+h1 {
   text-align: center;
-  display: block;
-  margin: 0 auto;
-  width: 40%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  margin: 10% 0;
   height: auto;
+  width: 50%;
   padding: 5% 0 10% 0;
   background-color: #91836e;
   box-shadow: 1px 0px 10px 5px black;
   border-radius: 10px;
 }
-ul * {
+ul {
+  padding: 0;
+  display: block;
   list-style: none;
+  margin: 0 auto;
   text-align: center;
-  padding: 2%;
 }
 li * {
   margin: 10%;
+}
+.input {
+  display: flex;
+  flex-direction: column;
 }
 .input * {
   display: block;
@@ -40,6 +55,22 @@ li * {
   background-color: #06d6a0;
   width: 150px;
 }
+.input p {
+  border: none;
+}
+.noneCompleted {
+  background-color: lightcoral;
+}
+.allCompleted {
+  background-color: lightgreen;
+}
 .container {
   display: flex;
+}
+@media (max-width: 670px) {
+  .card {
+    display: block;
+    width: 100%;
+    overflow: "wrap";
+  }
 }

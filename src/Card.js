@@ -35,6 +35,9 @@ class Card extends Component {
     const itemsCompletedData = this.state.itemsCompleted;
     itemsCompletedData.push(item);
     this.setState({ itemsCompleted: itemsCompletedData });
+    if (this.state.itemsCompleted.length > 0) {
+      this.setState({ itemsCompletedAvail: true });
+    }
   }
 
   render() {
@@ -56,7 +59,7 @@ class Card extends Component {
     });
     const dataItemsCompleted = this.state.itemsCompleted;
     const listItemsCompleted = dataItemsCompleted.map((x) => {
-      return <li key={x}>{x}</li>;
+      return <p key={x}>{x}</p>;
     });
 
     return (
@@ -66,7 +69,9 @@ class Card extends Component {
           <ul>{listItems}</ul>
           <div className="input">
             {!this.state.itemsAvail ? (
-              <p>Nothing left to complete, add more items.</p>
+              <p class="allCompleted">
+                Nothing left to complete, add more items.
+              </p>
             ) : (
               false
             )}
@@ -79,7 +84,9 @@ class Card extends Component {
           <ul>{listItemsCompleted}</ul>
           <div className="input">
             {!this.state.itemsCompletedAvail ? (
-              <p>Nothing completed yet. Finish something first!</p>
+              <p className="noneCompleted">
+                Nothing completed yet. Finish something first!
+              </p>
             ) : (
               false
             )}
